@@ -110,6 +110,24 @@ paths:
               schema:
                 $ref: '#/components/schemas/Transaction'
   /transaction/{id}:
+    get:
+      tags: [transaction]
+      summary: Get a transaction
+      parameters:
+        - name: id
+          in: path
+          description: Id of the transaction
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
     put:
       tags: [transaction]
       summary: Update a transaction
@@ -374,6 +392,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Workflow'
+        date:
+          type: string
+          format: date-time
+        files:
+          type: array
+          items:
+            $ref: '#/components/schemas/File'
     TransactionStateChange:
       type: object
       properties:
@@ -405,15 +430,6 @@ components:
           examples: [12]
         unitOfMeasure:
           $ref: '#/components/schemas/UnitOfMeasure'
-        bookingDate:
-          type: string
-          format: date-time
-        fileName:
-          type: string
-          examples: ["receipt.pdf"]
-        fileData:
-          type: string
-          examples: ["UEsDBBQABgAIAAAAIQBqNFTPyQEAAEMQAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACA..."]
         comment:
           type: string
           examples: ["Einspringen für Dozenten"]
@@ -460,16 +476,11 @@ components:
         - Teamteaching
         - Anzahl
     Booking:
-      type: object
-      properties:
-        bookingDate:
-          type: string
-          format: date-time
-        transactions:
-          type: array
-          items:
-            type: integer
-            format: int32
+      type: array
+      items:
+        type: integer
+        format: int32
+          
     Action:
       type: string
       examples: ["approve"]
@@ -496,3 +507,12 @@ components:
           format: date-time
         comment:
           type: string
+    File:
+      type: object
+      properties:
+        fileName:
+          type: string
+          examples: ["receipt.pdf"]
+        fileData:
+          type: string
+          examples: ["UEsDBBQABgAIAAAAIQBqNFTPyQEAAEMQAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACA..."]
