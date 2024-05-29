@@ -285,7 +285,15 @@ components:
   schemas:
     State:
       type: string
-      examples: [New]
+      example:
+        - New
+        - PendingApprovalSender
+        - PendingApprovalReceiver
+        - PendingApprovalControlling
+        - Rework
+        - PendingBooking
+        - Booked
+        - Cancelled
       enum:
         - New
         - PendingApprovalSender
