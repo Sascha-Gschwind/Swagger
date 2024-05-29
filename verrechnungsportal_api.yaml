@@ -285,7 +285,7 @@ components:
   schemas:
     State:
       type: string
-      example:
+      examples:
         - New
         - PendingApprovalSender
         - PendingApprovalReceiver
