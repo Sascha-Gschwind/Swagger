@@ -153,6 +153,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Transaction'
+    delete:
+      tags: [transaction]
+      summary: Delete a transaction
+      parameters:
+        - name: id
+          in: path
+          description: Id of the transaction
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Success
   /transaction/{id}/state:
     put:
       tags: [transaction]
