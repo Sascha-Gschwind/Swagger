@@ -165,7 +165,7 @@ paths:
             type: integer
             format: int32
       responses:
-        '200':
+        '204':
           description: Success
   /transaction/{id}/state:
     put:
