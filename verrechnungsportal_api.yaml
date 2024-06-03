@@ -337,6 +337,9 @@ components:
         department:
           type: string
           examples: ["IFU"]
+        email:
+          type: string
+          examples: ["max.muster@ost.ch"]
     BusinessCase:
       type: object
       properties:
