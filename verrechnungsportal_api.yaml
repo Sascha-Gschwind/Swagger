@@ -474,10 +474,16 @@ components:
     TransactionPositionData:
       type: object
       properties:
+        senderFieldName:
+          type: string
+          examples: ["Leistung erbracht durch"]
         senderData:
           type: array
           items:
             $ref: '#/components/schemas/TransactionPositionParty'
+        receiverFieldNameFieldName:
+          type: string
+          examples: ["Leistung erbracht für (Innenauftrag / PSP)"]
         receiverData:
           type: array
           items:
