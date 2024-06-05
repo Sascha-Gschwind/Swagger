@@ -511,6 +511,10 @@ components:
           type: boolean
         canDeleteTransaction:
           type: boolean
+        canRejectTransaction:
+          type: boolean
+        canAdvanceTransaction:
+          type: boolean
     UnitOfMeasure:
       type: string
       examples: ["Stunden"]
