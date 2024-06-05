@@ -387,6 +387,10 @@ components:
         description:
           type: string
           examples: ["Angefertigte Bauteile vom Labor"]
+        canEditSenderInformation:
+          type: boolean
+        canEditReceiverInformation:
+          type: boolean
         type:
           $ref: '#/components/schemas/BusinessCaseType'
         sender:
