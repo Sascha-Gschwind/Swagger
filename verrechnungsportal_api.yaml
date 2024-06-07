@@ -344,11 +344,9 @@ components:
             - Betragsmaessige Kostenverrechnung
             - Leistungsverrechnung von Personen
         type:
-          $ref: '#/components/schemas/BusinessCaseType'
-    BusinessCaseType:
-      type: integer
-      format: int32
-      examples: [1]
+          type: integer
+          format: int32
+          examples: [1]
     TransactionOverview:
       type: object
       properties:
@@ -361,8 +359,9 @@ components:
         description:
           type: string
           examples: ["Angefertigte Bauteile vom Labor"]
-        type:
-          $ref: '#/components/schemas/BusinessCaseType'
+        businessCase:
+          type: string
+          examples: ["b2de8ff4-0f3d-4555-9f78-f0239ef0b19c"]
         sender:
           $ref: '#/components/schemas/Person'
         receiver:
@@ -384,8 +383,9 @@ components:
           examples: ["Angefertigte Bauteile vom Labor"]
         rights:
           $ref: '#/components/schemas/TransactionRights'
-        type:
-          $ref: '#/components/schemas/BusinessCaseType'
+        businessCase:
+          type: string
+          examples: ["b2de8ff4-0f3d-4555-9f78-f0239ef0b19c"]
         sender:
           $ref: '#/components/schemas/Person'
         receiver:
