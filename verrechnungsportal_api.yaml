@@ -348,12 +348,7 @@ components:
           $ref: '#/components/schemas/BusinessCaseType'
     BusinessCaseType:
       type: string
-      examples: ["LeistungsverrechnungPerson"]
-      enum:
-        - LeistungsverrechnungPerson
-        - LeistungsverrechnungSache
-        - Kostenverrechnung
-        - Ertragsverrechnung
+      examples: ["cb029b06-b8db-4a6d-8883-cd0f453bb58f"]
     TransactionOverview:
       type: object
       properties:
