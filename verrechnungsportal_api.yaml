@@ -334,9 +334,8 @@ components:
       type: object
       properties:
         id:
-          type: integer
-          format: int32
-          examples: [1]
+          type: string
+          examples: ["b2de8ff4-0f3d-4555-9f78-f0239ef0b19c"]
         name:
           type: string
           examples: ["Mengenbezogene Leistungsverrechnung"]
@@ -347,8 +346,9 @@ components:
         type:
           $ref: '#/components/schemas/BusinessCaseType'
     BusinessCaseType:
-      type: string
-      examples: ["cb029b06-b8db-4a6d-8883-cd0f453bb58f"]
+      type: integer
+      format: int32
+      examples: [1]
     TransactionOverview:
       type: object
       properties:
