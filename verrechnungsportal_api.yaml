@@ -49,7 +49,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BusinessCase'
-  /masterdata/{transactionId}:
+  /masterdata/transaction/{transactionId}:
     get:
       tags: [masterdata]
       summary: Get the available position-selectables for a specific transaction
