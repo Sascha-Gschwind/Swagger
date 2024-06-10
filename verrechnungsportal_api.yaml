@@ -274,7 +274,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Transaction'
-  /transaction/book:
+  /transactions/book:
     put:
       tags: [transaction]
       summary: Book all positions of the transactions
