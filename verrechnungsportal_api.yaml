@@ -384,10 +384,6 @@ components:
           $ref: '#/components/schemas/Person'
         receiver:
           $ref: '#/components/schemas/Person'
-        year:
-          type: integer
-          format: int32
-          examples: [2024] 
         state:
           type: integer
           format: int32
