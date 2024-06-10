@@ -514,7 +514,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/TransactionPositionParty'
-        receiverFieldNameFieldName:
+        receiverFieldName:
           type: string
           examples: ["Leistung erbracht für (Innenauftrag / PSP)"]
         receiverData:
