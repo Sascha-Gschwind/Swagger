@@ -291,6 +291,49 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Transaction'
+  /attachment/{id}:
+    post:
+      tags: [attachment]
+      summary: Upload a new file
+      parameters:
+        - name: id
+          in: path
+          description: Id of the transaction
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/File'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/File'
+  /attachment/{archiveId}/{docId}:
+    delete:
+      tags: [attachment]
+      summary: Delete a file
+      parameters:
+        - name: archiveId
+          in: path
+          description: Id of the archive
+          required: true
+          schema:
+            type: string
+        - name: docId
+          in: path
+          description: Id of the file
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
 components:
   schemas:
     State:
@@ -400,7 +443,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Workflow'
-        date:
+        businessCaseDate:
           type: string
           format: date-time
         bookingDate:
@@ -556,9 +599,21 @@ components:
     File:
       type: object
       properties:
+        archiveId:
+          type: string
+          examples: ["ARCHIVE123"]
+        archiveDocId:
+          type: string
+          examples: ["FILE1234"]
+        subject:
+          type: string
+          examples: ["Beleg für Stundenaufwand"]
         fileName:
           type: string
           examples: ["receipt.pdf"]
         fileData:
           type: string
           examples: ["UEsDBBQABgAIAAAAIQBqNFTPyQEAAEMQAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACA..."]
+        mimeType:
+          type: string
+          examples: ["application/pdf"]
