@@ -347,6 +347,8 @@ components:
           examples: ["TRANS123"]
         isOpenTask:
           type: boolean
+        isBookingTask:
+          type: boolean
         description:
           type: string
           examples: ["Angefertigte Bauteile vom Labor"]
