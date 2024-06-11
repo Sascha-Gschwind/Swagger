@@ -475,7 +475,7 @@ components:
         receiver:
           $ref: '#/components/schemas/TransactionPositionParty'
         amount:
-          type: integer
+          type: number
           format: double
           examples: [12.1]
         unitOfMeasure:
