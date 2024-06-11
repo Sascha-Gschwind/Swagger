@@ -476,8 +476,8 @@ components:
           $ref: '#/components/schemas/TransactionPositionParty'
         amount:
           type: integer
-          format: int32
-          examples: [12]
+          format: double
+          examples: [12.1]
         unitOfMeasure:
           $ref: '#/components/schemas/UnitOfMeasure'
         comment:
