@@ -400,7 +400,7 @@ components:
           $ref: '#/components/schemas/Person'
         receiver:
           $ref: '#/components/schemas/Person'
-        date:
+        businessCaseDate:
           type: string
           format: date-time
         state:
