@@ -587,8 +587,12 @@ components:
         action:
           type: string
           examples: ["Beleg erstellt"]
-        person:
-          $ref: '#/components/schemas/Person'
+        firstName:
+          type: string
+          examples: ["Max"]
+        lastName:
+          type: string
+          examples: ["Muster"]
         date:
           type: string
           format: date-time
