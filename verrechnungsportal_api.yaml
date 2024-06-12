@@ -289,7 +289,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Transaction'
-  /attachment/{id}:
+  /attachment/{id}/:
     post:
       tags: [attachment]
       summary: Upload a new file
