@@ -312,23 +312,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/File'
-  /attachment/{archiveId}/{docId}:
     delete:
       tags: [attachment]
       summary: Delete a file
       parameters:
-        - name: archiveId
+        - name: id
           in: path
-          description: Id of the archive
+          description: Id of the transaction
           required: true
           schema:
             type: string
-        - name: docId
-          in: path
-          description: Id of the file
-          required: true
-          schema:
-            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                archiveDocId:
+                  type: string
+                  examples: ["FILE1234"]
       responses:
         '204':
           description: Success
@@ -601,9 +603,6 @@ components:
     File:
       type: object
       properties:
-        archiveId:
-          type: string
-          examples: ["ARCHIVE123"]
         archiveDocId:
           type: string
           examples: ["FILE1234"]
