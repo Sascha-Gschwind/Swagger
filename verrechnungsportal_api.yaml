@@ -285,6 +285,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Transaction'
+  /transaction/{transactionId}/attachment:
+    post:
+      tags: [transaction]
+      summary: Upload a new file
+      parameters:
+        - name: transactionId
+          in: path
+          description: Id of the transaction
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/File'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/File'
   /transaction/{transactionId}/attachment/{attachmentId}:
     get:
       tags: [transaction]
@@ -302,34 +325,6 @@ paths:
           required: true
           schema:
             type: string
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/File'
-    post:
-      tags: [transaction]
-      summary: Upload a new file
-      parameters:
-        - name: transactionId
-          in: path
-          description: Id of the transaction
-          required: true
-          schema:
-            type: string
-        - name: attachmentId
-          in: path
-          description: Id of the attachment. Equals the ArchiveDocId in SAP
-          required: true
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/File'
       responses:
         '200':
           description: Success
