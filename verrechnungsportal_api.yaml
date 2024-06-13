@@ -433,6 +433,8 @@ components:
           type: boolean
         isBookingTask:
           type: boolean
+        rights:
+          $ref: '#/components/schemas/TransactionOverviewRights'
         description:
           type: string
           examples: ["Angefertigte Bauteile vom Labor"]
@@ -566,6 +568,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/UnitOfMeasure'
+    TransactionOverviewRights:
+      type: object
+      properties:
+        canDelete:
+          type: boolean
     TransactionRights:
       type: object
       properties:
