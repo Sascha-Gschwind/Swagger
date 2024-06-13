@@ -62,7 +62,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BusinessCase'
-  /masterdata/roles:
+  /masterdata/role:
     get:
       tags: [masterdata]
       summary: Get the roles of the user
