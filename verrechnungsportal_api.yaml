@@ -161,12 +161,8 @@ paths:
             schema:
               $ref: '#/components/schemas/Transaction'
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Transaction'
     delete:
       tags: [transaction]
       summary: Delete a transaction
@@ -199,12 +195,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TransactionStateChange'
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Transaction'
   /transaction/{transactionId}/position:
     post:
       tags: [transaction]
@@ -224,12 +216,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TransactionPosition'
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Transaction'
   /transaction/{transactionId}/position/{positionId}:
     put:
       tags: [transaction]
@@ -255,12 +243,8 @@ paths:
             schema:
               $ref: '#/components/schemas/TransactionPosition'
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Transaction'
     delete:
       tags: [transaction]
       summary: Delete an existing position
@@ -279,12 +263,8 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Transaction'
   /transaction/{transactionId}/attachment:
     post:
       tags: [transaction]
@@ -302,12 +282,8 @@ paths:
             schema:
               $ref: '#/components/schemas/File'
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/File'
   /transaction/{transactionId}/attachment/{attachmentId}:
     get:
       tags: [transaction]
@@ -326,12 +302,8 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        '204':
           description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/File'
     delete:
       tags: [transaction]
       summary: Delete a file
