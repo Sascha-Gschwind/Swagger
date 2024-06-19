@@ -541,7 +541,7 @@ components:
       properties:
         canEditTransaction:
           type: boolean
-        canEditBookingData:
+        canEditBookingDate:
           type: boolean
         canDeleteTransaction:
           type: boolean
