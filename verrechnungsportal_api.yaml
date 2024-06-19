@@ -411,7 +411,7 @@ components:
           $ref: '#/components/schemas/Person'
         receiver:
           $ref: '#/components/schemas/Person'
-        businessCaseDate:
+        bookingDate:
           type: string
           format: date-time
         state:
@@ -452,9 +452,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Workflow'
-        businessCaseDate:
-          type: string
-          format: date-time
         bookingDate:
           type: string
           format: date-time
@@ -490,7 +487,8 @@ components:
           format: double
           examples: [12.1]
         unitOfMeasure:
-          $ref: '#/components/schemas/UnitOfMeasure'
+          type: string
+          examples: ["STD"]
         comment:
           type: string
           examples: ["Einspringen für Dozenten"]
@@ -505,6 +503,10 @@ components:
         name:
           type: string
           examples: ["Max Muster"]
+        pricePerUnit:
+          type: number
+          format: double
+          examples: [2.4]
     TransactionPositionPartyType:
       type: string
       examples: ["Person"]
@@ -539,6 +541,8 @@ components:
       properties:
         canEditTransaction:
           type: boolean
+        canEditBookingData:
+          type: boolean
         canDeleteTransaction:
           type: boolean
         canCancelTransaction:
@@ -550,13 +554,14 @@ components:
         canEditReceiver:
           type: boolean
     UnitOfMeasure:
-      type: string
-      examples: ["Stunden"]
-      enum:
-        - Stunden
-        - Lektionen
-        - Teamteaching
-        - Anzahl
+      type: object
+      properties:
+        id:
+          type: string
+          examples: ["STD"]
+        name:
+          type: string
+          examples: ["Stunden"]
     Booking:
       type: array
       items:
