@@ -533,8 +533,6 @@ components:
           items:
             $ref: '#/components/schemas/TransactionPositionParty'
         unitsOfMeasure:
-          type: array
-          items:
             $ref: '#/components/schemas/UnitOfMeasure'
     TransactionRights:
       type: object
