@@ -432,6 +432,9 @@ components:
         businessCase:
           type: string
           examples: ["b2de8ff4-0f3d-4555-9f78-f0239ef0b19c"]
+        businessCaseType:
+          type: number
+          examples: [1]
         sender:
           $ref: '#/components/schemas/Person'
         receiver:
