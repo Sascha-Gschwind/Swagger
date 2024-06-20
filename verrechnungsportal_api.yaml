@@ -413,7 +413,7 @@ components:
           $ref: '#/components/schemas/Person'
         bookingDate:
           type: string
-          format: date-time
+          format: date
         state:
           type: integer
           format: int32
@@ -454,7 +454,7 @@ components:
             $ref: '#/components/schemas/Workflow'
         bookingDate:
           type: string
-          format: date-time
+          format: date
         files:
           type: array
           items:
