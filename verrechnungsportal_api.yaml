@@ -339,7 +339,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BookingError'
+                type: array
+                items:
+                  $ref: '#/components/schemas/BookingError'
 components:
   schemas:
     State:
