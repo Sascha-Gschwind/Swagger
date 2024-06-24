@@ -418,6 +418,9 @@ components:
           type: integer
           format: int32
           examples: [1]
+        belegNumber:
+          type: string
+          examples: ["BELEG1234"]
     Transaction:
       type: object
       properties:
@@ -462,6 +465,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/FileOverview'
+        belegNumber:
+          type: string
+          examples: ["BELEG1234"]
     TransactionStateChange:
       type: object
       properties:
