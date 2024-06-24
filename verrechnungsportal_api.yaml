@@ -334,8 +334,12 @@ paths:
             schema:
               $ref: '#/components/schemas/Booking'
       responses:
-        '204':
-          description: Success
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingError'
 components:
   schemas:
     State:
@@ -625,6 +629,15 @@ components:
         fileName:
           type: string
           examples: ["foto.png"]
+    BookingError:
+      type: object
+      properties:
+        id:
+          type: string
+          examples: ["KI"]
+        message:
+          type: string
+          examples: ["Revenue cannot be assigned to CTR 1020/0.840"]
     File:
       type: object
       properties:
