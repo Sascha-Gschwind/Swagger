@@ -556,6 +556,10 @@ components:
       properties:
         canEditTransaction:
           type: boolean
+        canEditSenderPosition:
+          type: boolean
+        canEditReceiverPosition:
+          type: boolean
         canEditBookingDate:
           type: boolean
         canDeleteTransaction:
