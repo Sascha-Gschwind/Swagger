@@ -25,7 +25,7 @@ paths:
   /masterdata/workflowtype:
     get:
       tags: [masterdata]
-      summary: Gets all the possible workflow types
+      summary: Gets all the possible work flow types
       responses:
         '200':
           description: Success
