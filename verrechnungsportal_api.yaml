@@ -476,6 +476,9 @@ components:
         belegNumber:
           type: string
           examples: ["BELEG1234"]
+        kostenart:
+          type: string
+          examples: ["Kostenart 1234"]
     TransactionStateChange:
       type: object
       properties:
